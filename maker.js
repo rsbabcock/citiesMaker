@@ -2,9 +2,10 @@
 const citiesArticleRef = document.querySelector("#myCities")
 
 const citiesDomBuilder = (year) => {
-
+    
     // for each iterates through object and citiies
     citiesDatabase.cities.forEach(currentCity => {
+        // Filter the cards based on specific year visited, or all cities
     if( ! year || year === currentCity.yearVisited ) {
         // citySection creates section element for city info
         const citySection = document.createElement('section')
@@ -41,7 +42,6 @@ const citiesDomBuilder = (year) => {
     })
 }
 
-// Filter the cards based on specific year visited, or all cities
 // Style each card with a different background color, colored by continent 
 // (North America = green, South America = blue, Asia = purple, Antarctica = yellow, Europe = orange, Africa = red, Australia = brown)
 
