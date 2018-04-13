@@ -17,14 +17,21 @@ const citiesDomBuilder = () => {
         imageDom.src = currentCity.image
         citySection.appendChild(imageDom)
 
-        // const imageDatabase = document.createAttribute('src = ')
-        // imageDatabase.textContent = currentCity.image 
-        // imageDom.appendChild(imageDatabase)
+        const topAttractTitle = document.createElement('h3')
+        topAttractTitle.textContent = "List of Top Attractions"
+        citySection.appendChild(topAttractTitle)
 
-        const topFive = document.createElement('ul')
 
-        const topFiveAttractions = document.createElement('li')
-        
+        const makeTopFive = () => { 
+            for(let i = 0; i < currentCity.topFive.length; i ++) {
+            let topFiveP = document.createElement('p') 
+            topFiveP.textContent += currentCity.topFive[i]
+            citySection.appendChild(topFiveP);
+            }
+        }
+        makeTopFive()
+           
+
     });
 // Display your trips on the Dom, styled in cards. 
 // City name should appear above the image, in a larger font size, with all other details below the image
