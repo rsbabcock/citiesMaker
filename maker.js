@@ -5,7 +5,7 @@ const citiesDomBuilder = (year) => {
 
     // for each iterates through object and citiies
     citiesDatabase.cities.forEach(currentCity => {
-    if( year === typeof "undefined" || year === currentCity.yearVisited ) {
+    if( ! year || year === currentCity.yearVisited ) {
         // citySection creates section element for city info
         const citySection = document.createElement('section')
         citiesArticleRef.appendChild(citySection)
@@ -46,4 +46,4 @@ const citiesDomBuilder = (year) => {
 // (North America = green, South America = blue, Asia = purple, Antarctica = yellow, Europe = orange, Africa = red, Australia = brown)
 
 
-citiesDomBuilder("2010")
+citiesDomBuilder()
