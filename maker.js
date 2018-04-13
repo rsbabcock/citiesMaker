@@ -55,4 +55,4 @@ const citiesDomBuilder = (year) => {
 // (North America = green, South America = blue, Asia = purple, Antarctica = yellow, Europe = orange, Africa = red, Australia = brown)
 
 
-citiesDomBuilder()
+// citiesDomBuilder()
