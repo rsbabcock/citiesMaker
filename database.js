@@ -1,1 +1,1 @@
-const citiesDatabase = JSON.parse(localStorage.getItem("citiesDatabase"));
+const citiesDatabase = JSON.parse(localStorage.getItem("citiesDatabase"))
