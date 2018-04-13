@@ -7,10 +7,19 @@ const citiesDomBuilder = (year) => {
     citiesDatabase.cities.forEach(currentCity => {
         // Filter the cards based on specific year visited, or all cities
     if( ! year || year === currentCity.yearVisited ) {
-        // citySection creates section element for city info
+
         const citySection = document.createElement('section')
         citiesArticleRef.appendChild(citySection)
         // cityName creates the name of the cities from the database
+        if (currentCity.continent === "North America"){
+            citySection.className = "north_america"
+        } 
+        if (currentCity.continent === "Asia") {
+            citySection.className = "asia"
+        } else if (currentCity.continent === "Australaia") {
+            citySection.className = "australaia"
+        }
+        // citySection creates section element for city info
         const cityName = document.createElement('h2')
         cityName.textContent = currentCity.name 
         citySection.appendChild(cityName)
