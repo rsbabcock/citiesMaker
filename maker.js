@@ -13,8 +13,13 @@ const citiesDomBuilder = () => {
         citySection.appendChild(cityName)
 
         const imageDom = document.createElement('img')
-        imageDom.textContent = currentCity.image 
-        cityName.appendChild(imageDom)
+        imageDom.textContent = currentCity.name
+        imageDom.src = currentCity.image
+        citySection.appendChild(imageDom)
+
+        // const imageDatabase = document.createAttribute('src = ')
+        // imageDatabase.textContent = currentCity.image 
+        // imageDom.appendChild(imageDatabase)
 
         const topFive = document.createElement('ul')
 
