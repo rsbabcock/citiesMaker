@@ -1,5 +1,6 @@
 // Const that grabs article
 const citiesArticleRef = document.querySelector("#myCities")
+const fragment = document.createDocumentFragment()
 
 const citiesDomBuilder = (year) => {
     
@@ -9,7 +10,8 @@ const citiesDomBuilder = (year) => {
     if( ! year || year === currentCity.yearVisited ) {
 
         const citySection = document.createElement('section')
-        citiesArticleRef.appendChild(citySection)
+        // appends all new sections to the fragment rather than the article, writing to the dom once
+        fragment.appendChild(citySection)
         // cityName creates the name of the cities from the database
         if (currentCity.continent === "North America"){
             citySection.className = "north_america"
@@ -46,7 +48,8 @@ const citiesDomBuilder = (year) => {
         }
         // calls the function to make the attractions
         makeTopFive()
-           
+        // calls article dom ref and append fragment to it
+        citiesArticleRef.appendChild(fragment)   
         }
     })
 }
