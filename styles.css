@@ -4,6 +4,24 @@ font-family: 'Monoton', cursive; */
 body {
     background-color: whitesmoke;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;   
+}
+
+input {
+    padding: 2%;
+    border-radius: 10%;
+    border: none;   
+    background: goldenrod;
+}
+
+button {
+    padding: 2%;
+    border-radius: 10%;
+    background: tomato;
 }
 
 article {
