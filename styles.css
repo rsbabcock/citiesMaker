@@ -2,7 +2,7 @@
 font-family: 'Monoton', cursive; */
 
 body {
-    background-color: whitesmoke;
+    background: linear-gradient(0deg, black, whitesmoke);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
